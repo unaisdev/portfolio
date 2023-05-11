@@ -15,9 +15,6 @@ export default function Home() {
         <h1 className="text-5xl text-white font-bold mb-8 animate-bounce text-center">
           Coming Soon
         </h1>
-        <p className="text-white text-lg mb-8 text-center">
-          Estoy trabajando en la web, te dejo mis redes aquí abajo
-        </p>
         <div className='flex'>
           <SocialMediaButtons />
         </div>
