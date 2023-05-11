@@ -1,0 +1,42 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+  z-index: 999;
+  transition: opacity 0.5s ease; /* Añade una transición suave al cambiar la opacidad */
+}
+
+header.scrolled {
+  background-color: rgb(180, 180, 180, 1);
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav li a:hover {
+  color: #000;
+  text-shadow: 0 2px 10px rgb(60, 60, 60, 0.6);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin: 0 10px;
+    color: black;
+    transition: all 1.8s ease-in-out;
+}
+
+.icon:hover {
+    color: #0077b5;
+}
