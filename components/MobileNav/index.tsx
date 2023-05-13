@@ -32,7 +32,7 @@ const MobileNav = ({ open = false, setOpen }) => {
                 >
                     <div
                         id="sidebar"
-                        className={`fixed flex justify-between right-0 top-0 w-[250px] h-screen bg-white pt-12 p-8 z-50 py-24`}
+                        className={`fixed flex justify-between right-0 top-0 w-[250px] h-screen bg-white dark:bg-gray-900 pt-12 p-8 z-50 py-24`}
                     >
                         <div className="flex flex-col flex-grow justify-between">
 

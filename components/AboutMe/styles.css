@@ -1,6 +1,11 @@
 
-.command {
-  color: #00ff55;
+.comment {
+  font-family: monospace;
+  font-size: 8px;
+  color: green;
+  padding: 8px;
+  border-radius: 4px;
+  white-space: pre-line;
 }
 
 @keyframes enter-from-left {
@@ -26,9 +31,9 @@
 }
 
 .animate-enter-from-left {
-  animation: enter-from-left 1s forwards;
+  animation: enter-from-left 2s forwards;
 }
 
 .animate-enter-from-right {
-  animation: enter-from-right 1s forwards;
+  animation: enter-from-right 2s forwards;
 }
