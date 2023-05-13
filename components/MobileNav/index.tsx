@@ -3,7 +3,12 @@ import DarkModeToggle from "../DarkModeToggle";
 import SocialMediaButtons from "../SocialMediaButtons";
 import Image from "next/image";
 
-const MobileNav = ({ open = false, setOpen }) => {
+interface HeaderProps {
+    open: boolean;
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const MobileNav = ({ open = false, setOpen }:HeaderProps) => {
 
     function handleClickCarta() {
         const anchor = document.querySelector("#carta");
