@@ -7,33 +7,3 @@
   border-radius: 4px;
   white-space: pre-line;
 }
-
-@keyframes enter-from-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes enter-from-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.animate-enter-from-left {
-  animation: enter-from-left 2s forwards;
-}
-
-.animate-enter-from-right {
-  animation: enter-from-right 2s forwards;
-}
