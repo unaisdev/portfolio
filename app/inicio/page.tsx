@@ -15,6 +15,11 @@ export default function Home() {
       <AboutMe />
       <AboutMe />
       <AboutMe />
+      <AboutMe />
+      <AboutMe />
+      <AboutMe />
+      <AboutMe />
+      <AboutMe />
 
       </main>
       <Footer />
