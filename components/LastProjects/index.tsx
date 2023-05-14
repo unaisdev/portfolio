@@ -4,7 +4,7 @@ const AboutMe = () => {
     return (
         <section>
             <div className="flex justify-between flex-col md:flex-row">
-                <h1 className="first-letter:text-xl font-medium pl-12">Últimos proyectos</h1>
+                <h1 className="first-letter:text-xl sm:text-md font-medium pl-12">Últimos proyectos</h1>
                 <h2 className="first-letter:text-xl text-sm text-gray-300 font-medium flex justify-end pr-12">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-refresh stroke-slate-300" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

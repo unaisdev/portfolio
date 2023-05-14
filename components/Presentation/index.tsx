@@ -12,7 +12,7 @@ const Presentation = () => {
 
     return (
         <section>
-            <div id="presentation" className="relative flex bg-fixed bg-clip-border bg-no-repeat bg-cover flex-col-reverse md:flex-row justify-center items-center">
+            <div id="presentation" className="relative flex bg-fixed bg-clip-border bg-no-repeat bg-cover flex-col-reverse md:flex-row justify-center items-center pb-8">
                 {/* Capa de color y opacidad para la imagen del fondo */}
                 <div className='absolute inset-0 w-full h-full bg-red-950 bg-opacity-95'></div>
                 <div
@@ -24,8 +24,8 @@ const Presentation = () => {
                         <p className="comment font-semibold md:text-sm">{`// Aquí describo quién soy`}</p>
                     </div>
                     <div>
-                        <h1 className="text-md md:text-3xl font-semibold text-right">Unai Canales Sirvent</h1>
-                        <h2 className="text-sm md:text-xl text-right">Fullstack Developer</h2>
+                        <h1 className="text-3xl md:text-3xl font-semibold text-right">Unai Canales Sirvent</h1>
+                        <h2 className="text-lg md:text-xl text-right">Fullstack Developer</h2>
                     </div>
 
                     <div>
