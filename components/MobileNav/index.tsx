@@ -42,10 +42,10 @@ const MobileNav = ({ open = false, setOpen }:HeaderProps) => {
                         <div className="flex flex-col flex-grow justify-between">
 
 
-                            <div className="flex justify-between items-center mb-5">
+                            <div className="flex justify-end items-center mb-5">
                                 <DarkModeToggle />
 
-                                <button
+                                {/* <button
                                     className="bg-red-800 h-10 w-10 p-2 rounded-xl"
                                     onClick={() => setOpen(false)}
                                     aria-expanded={open}
@@ -58,7 +58,7 @@ const MobileNav = ({ open = false, setOpen }:HeaderProps) => {
                                         src="icons/icon-close-menu.svg"
                                         alt="Close Menu"
                                     />
-                                </button>
+                                </button> */}
                             </div>
 
                             <ul className="flex flex-col space-y-3 mb-6">
