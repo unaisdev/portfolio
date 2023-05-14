@@ -1,6 +1,6 @@
 'use client'
 
-import AboutMe from '@/components/AboutMe'
+import Presentation from '@/components/Presentation'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Image from 'next/image'

@@ -3,17 +3,21 @@ import { useState, useEffect } from 'react';
 import SocialMediaButtons from '../SocialMediaButtons';
 import './styles.css'; // Importa tus estilos personalizados
 
-const AboutMe = () => {
-    const [showColumns, setShowColumns] = useState(false);
+const Presentation = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        setShowColumns(true);
+        setIsLoaded(true);
     }, []);
 
     return (
         <section>
-            <div className="grid grid-cols-2">
-                <div className={`flex flex-col justify-center items-end ${showColumns ? 'animate-enter-from-left' : 'invisible'}`}>
+            <div className="flex flex-col-reverse md:flex-row justify-center items-center">
+                <div
+                    id="left"
+                    className={`flex flex-col justify-center items-end transform ${isLoaded ? 'translate-x-0 transition-transform duration-500' : 'invisible -translate-x-full'
+                        }`}
+                >
                     <div className="flex items-end">
                         <p className="comment font-semibold md:text-sm">{`// Aquí describo quién soy`}</p>
                     </div>
@@ -22,12 +26,15 @@ const AboutMe = () => {
                         <h2 className="text-sm md:text-xl text-right">Fullstack Developer</h2>
                     </div>
 
-                        <div>
-                            <SocialMediaButtons />
-                        </div>
+                    <div>
+                        <SocialMediaButtons />
+                    </div>
                 </div>
 
-                <div className={`flex flex-col justify-center items-start ${showColumns ? 'animate-enter-from-right' : 'invisible'}`}>
+                <div
+                    id="right"
+                    className={`flex flex-col justify-center items-start`}
+                >
                     <Image
                         width={550}
                         height={350}
@@ -41,4 +48,4 @@ const AboutMe = () => {
     );
 };
 
-export default AboutMe;
+export default Presentation;
