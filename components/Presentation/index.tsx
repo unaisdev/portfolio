@@ -12,10 +12,12 @@ const Presentation = () => {
 
     return (
         <section>
-            <div className="flex flex-col-reverse md:flex-row justify-center items-center">
+            <div id="presentation" className="relative flex bg-fixed bg-clip-border bg-no-repeat bg-cover flex-col-reverse md:flex-row justify-center items-center">
+                {/* Capa de color y opacidad para la imagen del fondo */}
+                <div className='absolute inset-0 w-full h-full bg-red-950 bg-opacity-95'></div>
                 <div
                     id="left"
-                    className={`flex flex-col justify-center items-end transform ${isLoaded ? 'translate-x-0 transition-transform duration-500' : 'invisible -translate-x-full'
+                    className={`flex flex-col justify-center items-end transform ${isLoaded ? 'translate-x-0 transition-transform duration-1000' : 'invisible -translate-x-full'
                         }`}
                 >
                     <div className="flex items-end">
@@ -33,7 +35,7 @@ const Presentation = () => {
 
                 <div
                     id="right"
-                    className={`flex flex-col justify-center items-start`}
+                    className={`z-10 flex flex-col justify-center items-start`}
                 >
                     <Image
                         width={550}
