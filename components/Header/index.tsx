@@ -50,17 +50,7 @@ const Header = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 dark:fill-white" viewBox="0 0 24 24"><path d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z" /></svg>
                 </button>
                 <MobileNav open={open} setOpen={setOpen} />
-                <nav>
-                    <ul className="hidden divide-x lg:flex  lg:ml-14">
-                        <li onClick={() => { }} className="cursor-pointer hover:text-almost-black px-6">
-                            NUESTRA CARTA
-                        </li>
-
-                        <li onClick={() => { }} className="cursor-pointer hover:text-almost-black px-6">
-                            DÓNDE ESTAMOS
-                        </li>
-                    </ul>
-                </nav>
+                
             </div>
 
         </header>
