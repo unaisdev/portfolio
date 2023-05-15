@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import SocialMediaButtons from '../SocialMediaButtons';
 import './styles.css'; // Importa tus estilos personalizados
+import InfoPresentation from './InfoPresentation';
 
 const Presentation = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -11,21 +12,21 @@ const Presentation = () => {
     }, []);
 
     return (
-        <section>
+        <section className='relative'>
             <div id="presentation" className="relative h-96 max-h-96 flex bg-fixed bg-clip-border bg-no-repeat bg-cover bg-center flex-col-reverse md:flex-row justify-center items-center py-8">
                 {/* Capa de color y opacidad para la imagen del fondo */}
-                <div className='absolute inset-0 w-full h-full bg-gray-700 bg-opacity-90'></div>
+                <div className='absolute inset-0 w-full h-full bg-gray-700 bg-opacity-70 dark:bg-opacity-90'></div>
                 <div
                     id="left"
-                    className={`flex flex-col justify-center items-end transform ${isLoaded ? 'translate-x-0 transition-transform duration-1000' : 'invisible -translate-x-full'
+                    className={`flex flex-col justify-center items-end mx-12 transform ${isLoaded ? 'translate-x-0 transition-transform duration-1000' : 'invisible -translate-x-full'
                         }`}
                 >
                     <div className="flex items-end">
-                        <p className="comment font-semibold text-xs md:text-sm">{`// Una breve presentacion`}</p>
+                        <p className="comment font-extrabold text-xs md:text-sm">{`// Una breve presentacion`}</p>
                     </div>
                     <div>
                         <h1 className="text-4xl md:text-5xl font-semibold text-right">Unai Canales Sirvent</h1>
-                        <h2 className="text-xl md:text-xl text-right">Fullstack Developer</h2>
+                        <h2 className="text-xl md:text-xl font-medium text-right">Fullstack Developer</h2>
                     </div>
 
                     <div>
@@ -46,6 +47,8 @@ const Presentation = () => {
                     />
                 </div> */}
             </div>
+            <InfoPresentation />
+
         </section>
     );
 };

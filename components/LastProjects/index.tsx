@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-const AboutMe = () => {
+const LastProjects = () => {
     return (
-        <section className="px-6">
+        <section className="pt-6 sm:pt-12 px-6">
             <div className="flex justify-between flex-col md:flex-row">
                 <div className="flex flex-row">
                     <svg xmlns="http://www.w3.org/2000/svg" className="mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -15,7 +15,7 @@ const AboutMe = () => {
                         <path d="M14 9l4 -1"></path>
                         <path d="M16 16l3.923 -.98"></path>
                     </svg>
-                    <h1 className="first-letter:text-xl sm:text-md font-medium">Últimos proyectos</h1>
+                    <h1 className="first-letter:text-xl text-lg font-bold">Últimos proyectos</h1>
                 </div>
 
                 <div className="flex flex-col items-end justify-end pt-4">
@@ -28,9 +28,9 @@ const AboutMe = () => {
                             <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
                         </svg>
                     </button>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row mt-2">
                         <p className="text-xxs flex items-center justify-end text-slate-200 font-medium">14/05/2023 a las 15:43h</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="m-2 h-4 w-4 stroke-slate-200" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4 stroke-slate-200" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
                             <path d="M12 12l2 3"></path>
@@ -91,4 +91,4 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe
+export default LastProjects
