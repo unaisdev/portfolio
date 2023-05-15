@@ -5,7 +5,7 @@ import './styles.css';
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import DarkModeToggle from "../DarkModeToggle";
-import MobileNav from "../MobileNav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     const [headerOpacity, setHeaderOpacity] = useState(1);
