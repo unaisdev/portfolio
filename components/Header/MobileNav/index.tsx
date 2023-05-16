@@ -72,7 +72,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                 <li>
                                     <a
                                         onClick={() => { scrollTo.handleScrollToInicio(); setOpen(false) }}
-                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Inicio
                                     </a>
@@ -80,7 +80,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                 <li>
                                     <a
                                         onClick={() => { scrollTo.handleScrollToExperience(); setOpen(false) }}
-                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Experiencia
                                     </a>
@@ -88,7 +88,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                 <li>
                                     <a
                                         onClick={() => { scrollTo.handleScrollToProjects(); setOpen(false) }}
-                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Projectos
                                     </a>
@@ -96,7 +96,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                 <li>
                                     <a
                                         onClick={() => { scrollTo.handleScrollToTechnologies(); setOpen(false) }}
-                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Tecnologías
                                     </a>
