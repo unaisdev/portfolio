@@ -3,16 +3,36 @@ import { useEffect } from "react"
 import ProjectCard from "../ProjectCard"
 
 const ProjectList = () => {
-    const [projects, populateProjects, isLoading] = useLocalProjectsStore((state) => [
-        state.projects,
-        state.populateProjects,
-        state.isLoading
-    ])
+    // const [projects, populateProjects, isLoading] = useLocalProjectsStore((state) => [
+    //     state.projects,
+    //     state.populateProjects,
+    //     state.isLoading
+    // ])
+
+    // useEffect(() => {
+    //     populateProjects();
+    // }, [populateProjects]);
+
+
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        populateProjects();
-    }, [populateProjects]);
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1000)
+    }, [])
 
+
+    const projects = [
+        {
+            id: "1",
+            title: "Portfolio",
+            desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, maiores quod ad ducimus dolor incidunt velit quasi reiciendis debitis amet possimus harum eum voluptate quis nulla explicabo soluta, neque error.",
+            image_src: "/images/portfolio_unai_canales.webp",
+            published_at: "",
+            skillIds: [1, 2]
+        }
+    ]
 
     return (
         <div className="flex flex-row flex-wrap justify-center py-6 ">
