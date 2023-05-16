@@ -7,7 +7,7 @@ import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import LastProjects from '@/components/Projects'
-import Skills from '@/components/Skills'
+import Technologies from '@/components/Technologies'
 import Experience from '@/components/Experience'
 import { Analytics } from '@vercel/analytics/react';
 import { useLocalProjectsStore } from '@/zustand/store'
@@ -63,7 +63,7 @@ export default function Home() {
               <Presentation />
               <Experience />
               <LastProjects />
-              <Skills />
+              <Technologies skills={[]} />
             </main>
             <Footer />
             <Analytics />

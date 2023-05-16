@@ -11,7 +11,7 @@ datasource db {
 }
 
 model project {
-  id           String       @id @map("_id")
+  id           String  @id @map("_id")
   image_src    String
   title        String
   desc         String
@@ -20,6 +20,7 @@ model project {
 }
 
 model skill {
-  id        String      @id @map("_id")
-  name      String
+  id         String @id @map("_id")
+  name       String
+  image_path String
 }
