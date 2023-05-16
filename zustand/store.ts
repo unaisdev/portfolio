@@ -1,10 +1,15 @@
 import { SetState, StoreApi, create } from "zustand";
 import { Prisma, project } from "@prisma/client";
 
-type State = {
+type ProjectsState = {
   isLoading: boolean;
   projects: project[];
   populateProjects: () => void;
+};
+
+type InicioComponentsState = {
+  isLoading: boolean;
+  
 };
 
 const getProjects = async (): Promise<project[]> => {
@@ -23,7 +28,7 @@ const getProjects = async (): Promise<project[]> => {
   }
 };
 
-export const useLocalProjectsStore = create<State>((set) => ({
+export const useLocalProjectsStore = create<ProjectsState>((set) => ({
   projects: [],
   populateProjects: async () => {
     try {
@@ -38,22 +43,32 @@ export const useLocalProjectsStore = create<State>((set) => ({
   isLoading: true,
 }));
 
-// Vercel deployment store configuration
-export const useVercelProjectsStore = create<State>((set) => ({
-  projects: [
-    {
-      id: "1",
-      title: "Portfolio",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, maiores quod ad ducimus dolor incidunt velit quasi reiciendis debitis amet possimus harum eum voluptate quis nulla explicabo soluta, neque error.",
-      image_src: "/images/portfolio_unai_canales.webp",
-      published_at: "",
-      skillIds: [1, 2],
-    },
-    // Add other projects as needed
-  ],
-  populateProjects: async () => {
-    // No API fetch is required in this case, as we're using literals
-    // If needed, you can implement additional logic here
-  },
-  isLoading: false,
-}));
+// // Vercel deployment store configuration
+// export const useVercelProjectsStore = create<State>((set) => ({
+//   projects: [
+//     {
+//       id: "1",
+//       title: "Portfolio",
+//       desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, maiores quod ad ducimus dolor incidunt velit quasi reiciendis debitis amet possimus harum eum voluptate quis nulla explicabo soluta, neque error.",
+//       image_src: "/images/portfolio_unai_canales.webp",
+//       published_at: "",
+//       skillIds: [1, 2],
+//     },
+//     // Add other projects as needed
+//   ],
+//   populateProjects: async () => {
+//     // No API fetch is required in this case, as we're using literals
+//     // If needed, you can implement additional logic here
+//   },
+//   isLoading: false,
+// }));
+
+
+// export const useFetchLoading = create<State>((set) => ({
+  
+//   populateProjects: async () => {
+//     // No API fetch is required in this case, as we're using literals
+//     // If needed, you can implement additional logic here
+//   },
+//   isLoading: false,
+// }));
