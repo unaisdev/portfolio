@@ -27,9 +27,7 @@ export default function Home() {
   ])
 
   useEffect(() => {
-    console.log("usieffect" + projects.length);
-    
-    if(projects.length === 0)   populateData();
+    if (projects.length === 0) populateData();
   }, []);
 
   const handleScrollToInicio = () => {
