@@ -6,9 +6,16 @@ import Image from "next/image";
 interface HeaderProps {
     open: boolean;
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    scrollTo: {
+        handleScrollToInicio: () => void,
+        handleScrollToExperience: () => void,
+        handleScrollToProjects: () => void,
+        handleScrollToTechnologies: () => void,
+    };
+
 }
 
-const MobileNav = ({ open = false, setOpen }:HeaderProps) => {
+const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
 
     function handleClickCarta() {
         const anchor = document.querySelector("#carta");
@@ -62,10 +69,42 @@ const MobileNav = ({ open = false, setOpen }:HeaderProps) => {
                             </div>
 
                             <ul className="flex flex-col space-y-3 mb-6">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Sobre mi</a></li>
-                                <li><a href="#">Tecnologías</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li>
+                                    <a
+                                        onClick={() => { scrollTo.handleScrollToInicio(); setOpen(false) }}
+                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        href=""
+                                    >
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => { scrollTo.handleScrollToExperience(); setOpen(false) }}
+                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        href=""
+                                    >
+                                        Experiencia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => { scrollTo.handleScrollToProjects(); setOpen(false) }}
+                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        href=""
+                                    >
+                                        Projectos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => { scrollTo.handleScrollToTechnologies(); setOpen(false) }}
+                                        className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                                        href=""
+                                    >
+                                        Tecnologías
+                                    </a>
+                                </li>
                             </ul>
                             <div className="">
                                 <SocialMediaButtons />

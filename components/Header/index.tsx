@@ -7,7 +7,16 @@ import { useTheme } from "next-themes";
 import DarkModeToggle from "../DarkModeToggle";
 import MobileNav from "./MobileNav";
 
-const Header = () => {
+type Props = {
+    scrollTo: {
+        handleScrollToInicio: () => void,
+        handleScrollToExperience: () => void,
+        handleScrollToProjects: () => void,
+        handleScrollToTechnologies: () => void,
+    };
+}
+
+const Header = ({ scrollTo }: Props) => {
     const [headerOpacity, setHeaderOpacity] = useState(1);
     const [open, setOpen] = useState(false)
 
@@ -31,10 +40,42 @@ const Header = () => {
             </div>
             <nav className="hidden sm:flex">
                 <ul className="flex gap-10 ">
-                    <li><a className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]" href="#">Inicio</a></li>
-                    <li><a className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]" href="#">Sobre mi</a></li>
-                    <li><a className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]" href="#">Tecnologías</a></li>
-                    <li><a className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]" href="#">Contacto</a></li>
+                    <li>
+                        <a
+                            onClick={scrollTo.handleScrollToInicio}
+                            className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                            href=""
+                        >
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            onClick={scrollTo.handleScrollToExperience}
+                            className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                            href=""
+                        >
+                            Experiencia
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            onClick={scrollTo.handleScrollToProjects}
+                            className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                            href=""
+                        >
+                            Projectos
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            onClick={scrollTo.handleScrollToTechnologies}
+                            className="dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
+                            href=""
+                        >
+                            Tecnologías
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div className="hidden sm:flex">
@@ -49,8 +90,8 @@ const Header = () => {
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 dark:fill-white" viewBox="0 0 24 24"><path d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z" /></svg>
                 </button>
-                <MobileNav open={open} setOpen={setOpen} />
-                
+                <MobileNav scrollTo={scrollTo} open={open} setOpen={setOpen} />
+
             </div>
 
         </header>

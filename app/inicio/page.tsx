@@ -10,10 +10,16 @@ import LastProjects from '@/components/Projects'
 import Technologies from '@/components/Technologies'
 import Experience from '@/components/Experience'
 import { Analytics } from '@vercel/analytics/react';
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useLocalStore } from '@/zustand/store'
 
+
 export default function Home() {
+  const inicioRef = useRef<HTMLDivElement | null>(null);
+  const experienceRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const tecnologiesRef = useRef<HTMLDivElement | null>(null);
+
   const [populateData, isLoading] = useLocalStore((state) => [
     state.populateData,
     state.isLoading
@@ -23,6 +29,49 @@ export default function Home() {
     populateData();
   }, []);
 
+  const handleScrollToInicio = () => {
+    console.log("scrolling");
+
+    const offsetTop = inicioRef?.current?.offsetTop ?? 0
+
+    window.scrollTo({
+      top: offsetTop - 80,
+      behavior: 'smooth',
+    });
+  }
+
+  const handleScrollToExperience = () => {
+    console.log("scrolling");
+
+    const offsetTop = experienceRef?.current?.offsetTop ?? 0
+
+    window.scrollTo({
+      top: offsetTop - 80,
+      behavior: 'smooth',
+    });
+  }
+
+  const handleScrollToProjects = () => {
+    console.log("scrolling");
+
+    const offsetTop = projectsRef?.current?.offsetTop ?? 0
+
+    window.scrollTo({
+      top: offsetTop - 80,
+      behavior: 'smooth',
+    });
+  }
+
+  const handleScrollToTechnologies = () => {
+    console.log("scrolling");
+
+    const offsetTop = tecnologiesRef?.current?.offsetTop ?? 0
+
+    window.scrollTo({
+      top: offsetTop - 80,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <ThemeProvider attribute="class">
@@ -50,12 +99,20 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <Header />
+            <Header scrollTo={{ handleScrollToInicio, handleScrollToExperience, handleScrollToProjects, handleScrollToTechnologies }} />
             <main>
               <Presentation />
-              <Experience />
-              <LastProjects />
-              <Technologies />
+              <div ref={experienceRef}>
+                <Experience />
+
+              </div>
+              <div ref={projectsRef}>
+                <LastProjects />
+
+              </div>
+              <div ref={tecnologiesRef}>
+                <Technologies />
+              </div>
             </main>
             <Footer />
             <Analytics />
