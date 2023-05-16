@@ -1,5 +1,5 @@
 import { useLocalProjectsStore } from "@/zustand/store"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ProjectCard from "../ProjectCard"
 
 const ProjectList = () => {
