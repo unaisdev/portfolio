@@ -10,9 +10,8 @@ const ProjectList = () => {
     ])
 
     useEffect(() => {
-        populateProjects()
-    }, [])
-
+        populateProjects();
+    }, [populateProjects]);
 
 
     return (
