@@ -13,7 +13,7 @@ const Presentation = () => {
 
     return (
         <section className='relative'>
-            <div id="presentation" className="relative h-96 max-h-96 flex bg-clip-border bg-no-repeat bg-local bg-center flex-col-reverse md:flex-row justify-center items-center py-8">
+            <div id="presentation" className="relative h-96 max-h-96 w-screen flex bg-clip-border bg-no-repeat bg-local bg-center bg-cover flex-col-reverse md:flex-row justify-center items-center py-8">
                 {/* Capa de color y opacidad para la imagen del fondo */}
                 <div className='absolute inset-0 w-full h-full bg-slate-100 dark:bg-black bg-opacity-90 dark:bg-opacity-80'></div>
                 <div
