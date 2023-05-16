@@ -18,7 +18,7 @@ const ProjectList = () => {
     ]
 
     return (
-        <div className="flex flex-row flex-wrap justify-center py-6 ">
+        <div className="flex flex-row flex-wrap justify-center py-12 ">
             {projects.map((project) => (
                 <ProjectCard
                     key={project.id} // Assuming the project has an `id` property

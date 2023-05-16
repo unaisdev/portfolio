@@ -34,17 +34,17 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
             <Transition show={open}>
                 {/* Sliding sidebar */}
                 <Transition.Child
-                    className="fixed flex right-0 top-0 w-[250px] z-30 h-screen"
-                    enter="transition ease-in-out duration-300 transform"
+                    className="fixed flex right-0 top-0 w-[180px] z-30 h-screen"
+                    enter="transition ease-in-out duration-500 transform"
                     enterFrom="translate-x-full"
                     enterTo="translate-x-0"
-                    leave="transition ease-in-out duration-300 transform"
+                    leave="transition ease-in-out duration-500 transform"
                     leaveFrom="translate-x-0"
                     leaveTo="translate-x-full"
                 >
                     <div
                         id="sidebar"
-                        className={`fixed flex justify-between right-0 top-0 w-[250px] h-screen bg-white dark:bg-gray-900 pt-12 p-8 z-50 py-24`}
+                        className={`fixed flex justify-between right-0 top-0 w-[180px] h-screen bg-white dark:bg-gray-900 pt-12 p-8 z-50 py-24 transition duration-500`}
                     >
                         <div className="flex flex-col flex-grow justify-between">
 

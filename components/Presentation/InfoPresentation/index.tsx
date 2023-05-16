@@ -1,6 +1,6 @@
 const InfoPresentation = () => {
     return (
-        <div className="absolute z-30 -bottom-14 left-1/2 transform -translate-x-1/2 w-5/6 sm:w-2/4 h-22 sm:h-28 shadow-lg dark:bg-gray-800 bg-white rounded-full border border-gray-200 dark:text-white dark:border-gray-600">
+        <div className="absolute z-30 -bottom-14 left-1/2 transform transition duration-500 -translate-x-1/2 w-5/6 sm:w-2/4 h-22 sm:h-28 shadow-lg dark:bg-gray-800 bg-white rounded-full border border-gray-200 dark:text-white dark:border-gray-600">
             <div className="flex h-full flex-row justify-between items-center px-12">
                 <div className="flex flex-col">
                     <div className="flex items-center my-3">

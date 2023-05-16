@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
-const DarkModeToggle = ({ colour = 'bg-gray-200 dark:bg-gray-300', on = false, onToggle = (isOn: boolean) => { }, tabIndex = 0 }) => {
+const DarkModeToggle = ({ colour = 'bg-gray-200 dark:bg-gray-300 transition duration-500', on = false, onToggle = (isOn: boolean) => { }, tabIndex = 0 }) => {
     const [mounted, setMounted] = useState(false);
     const { systemTheme, theme, setTheme, resolvedTheme } = useTheme();
 

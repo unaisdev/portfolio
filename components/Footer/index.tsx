@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <footer
                 aria-label="Site Footer"
-                className="bg-gray-100 dark:bg-black border-t-2 border-t-gray-300"
+                className="bg-gray-100 dark:bg-black border-t-2 border-t-gray-300 transition duration-500"
             >
                 <div className="flex justify-center mx-auto max-w-screen-xl px-2 py-2 ">
                     <div className="py-2 lg:flex lg:items-center lg:justify-center">
