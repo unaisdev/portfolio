@@ -43,13 +43,13 @@ export default function Home() {
 
             </div>
             <div className='flex flex-col justify-center items-center py-12'>
-              <h1 className="mb-2 flex font-mono text-4xl text-gray-100 md:text-6xl">
+              <h1 className="mb-2 flex font-mono text-2xl text-gray-100 md:text-6xl">
                 <br className="block md:hidden" />
                 <span className="relative">
                   <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent">
-                    Cargando... <span className="text-3xl md:text-5xl"></span>
+                    Cargando... <span className="text-xl md:text-2xl"></span>
                   </span>
-                  <span className="cursor absolute -bottom-0 left-0 -top-1 inline-block bg-gray-900 w-full animate-type will-change">
+                  <span className="absolute -bottom-0 left-0 -top-1 inline-block bg-gray-900 w-full animate-type will-change">
                   </span>
                 </span>
               </h1>

@@ -16,7 +16,7 @@ module.exports = {
         width: "width",
       },
       animation: {
-        type: 'type 5s ease-out 3s infinite alternate both',
+        type: 'type 1.8s ease-out .8s infinite alternate both',
         'type-reverse': 'type 1.8s ease-out 0s infinite alternate-reverse both',
       },
       keyframes: {
@@ -30,7 +30,8 @@ module.exports = {
           '55%, 60%': { width: '6ch' },
           '65%, 70%': { width: '7ch' },
           '75%, 80%': { width: '8ch' },
-          '95%': { width: '11ch' },
+          '85%, 90%': { width: '9ch' },
+          '95%': { width: '10ch' },
         },
       },
     },
