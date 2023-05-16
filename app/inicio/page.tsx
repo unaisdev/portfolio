@@ -16,7 +16,6 @@ export default function Home() {
       <Header />
       <main>
         <Presentation />
-        <hr className="h-px mb-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <Experience />
         <LastProjects />
         <Skills />

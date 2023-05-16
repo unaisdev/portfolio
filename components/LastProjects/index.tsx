@@ -1,10 +1,18 @@
+import { SetState, create } from 'zustand'
 import Image from "next/image"
+import { Prisma } from "@prisma/client";
+import { useProjectsStore } from '@/zustand/store';
+import { use, useEffect } from 'react';
+import ProjectList from './components/ProjectList';
+
+
 
 const LastProjects = () => {
+
     return (
-        <section className="pt-6 sm:pt-12 px-6">
+        <section className="py-12">
             <div className="flex justify-between flex-col md:flex-row">
-                <div className="flex flex-row">
+                <div className="flex flex-row px-6">
                     <svg xmlns="http://www.w3.org/2000/svg" className="mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
@@ -18,7 +26,7 @@ const LastProjects = () => {
                     <h1 className="first-letter:text-xl text-lg font-bold">Últimos proyectos</h1>
                 </div>
 
-                <div className="flex flex-col items-end justify-end pt-4">
+                {/* <div className="flex flex-col items-end justify-end pt-4">
 
                     <button type="button" className="flex items-center justify-end py-1.5 px-3 sm:py-2.5 sm:px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                         <p className="text-xs sm:text-sm flex items-center text-gray-400 font-medium">Actualizar</p>
@@ -38,52 +46,10 @@ const LastProjects = () => {
                         </svg>
                     </div>
 
-                </div>
+                </div> */}
             </div>
             <div className="flex flex-col sm:my-4">
-                <div className="flex flex-col md:flex-row">
-                    <div className="col border-gray-900 border-t-gray-400 rounded-xl shadow-md my-6 sm:mx-6 sm:my-0">
-                        <Image
-                            className="rounded-t-lg w-full h-36 object-cover"
-                            src={"https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"}
-                            width={200}
-                            height={150}
-                            alt="" />
-                        <div className="m-4 mt-1">
-                            <h2 className="first-letter:text-xl text-md font-semibold py-4">Aplicacion móvil gestión de reservas</h2>
-                            <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum provident magni vitae, assumenda laboriosam dolore saepe, illo minima culpa odio deleniti porro quas iure explicabo corrupti ullam velit esse!</p>
-                        </div>
-                    </div>
-
-                    <div className="col border-gray-900 border-t-gray-400 rounded-xl shadow-md my-6 sm:mx-6 sm:my-0">
-                        <Image
-                            className="rounded-t-lg w-full h-36 object-cover"
-
-                            src={"https://images.unsplash.com/photo-1609406316383-64330d0c6ca9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}
-                            width={200}
-                            height={150}
-                            alt="" />
-                        <div className="m-4 mt-1">
-
-                            <h2 className="first-letter:text-xl font-semibold py-4">Aplicacion móvil gestión de reservas</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum provident magni vitae, assumenda laboriosam dolore saepe, illo minima culpa odio deleniti porro quas iure explicabo corrupti ullam velit esse!</p>
-                        </div>
-                    </div>
-
-                    <div className="col border-gray-900 border-t-gray-400 rounded-xl shadow-md my-6 sm:mx-6 sm:my-0">
-                        <Image
-                            className="rounded-t-lg w-full h-36 object-cover"
-
-                            src={"https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1201&q=80"}
-                            width={200}
-                            height={150}
-                            alt="" />
-                        <div className="m-4 mt-1">
-                            <h2 className="first-letter:text-xl font-semibold py-4">Aplicacion móvil gestión de reservas</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illum provident magni vitae, assumenda laboriosam dolore saepe, illo minima culpa odio deleniti porro quas iure explicabo corrupti ullam velit esse!</p>
-                        </div>
-                    </div>
-                </div>
+                    <ProjectList />
 
 
             </div>
