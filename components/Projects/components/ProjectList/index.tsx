@@ -1,4 +1,3 @@
-import { useLocalProjectsStore } from "@/zustand/store"
 import { useEffect, useState } from "react"
 import ProjectCard from "../ProjectCard"
 

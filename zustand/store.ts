@@ -1,16 +1,13 @@
 import { SetState, StoreApi, create } from "zustand";
-import { Prisma, project } from "@prisma/client";
+import { Prisma, project, skill } from "@prisma/client";
 
-type ProjectsState = {
+type State = {
   isLoading: boolean;
   projects: project[];
-  populateProjects: () => void;
+  skills: skill[];
+  populateData: () => void;
 };
 
-type InicioComponentsState = {
-  isLoading: boolean;
-  
-};
 
 const getProjects = async (): Promise<project[]> => {
   try {
@@ -28,11 +25,30 @@ const getProjects = async (): Promise<project[]> => {
   }
 };
 
-export const useLocalProjectsStore = create<ProjectsState>((set) => ({
+const getSkills = async (): Promise<skill[]> => {
+  try {
+    const res = await fetch(`api/skills`, {
+      method: "GET",
+      headers: {},
+    });
+
+    const data: skill[] = await res.json();
+    console.log(JSON.stringify(data));
+    return data;
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+};
+
+export const useLocalStore = create<State>((set) => ({
   projects: [],
-  populateProjects: async () => {
+  skills: [],
+  populateData: async () => {
     try {
       const projects = await getProjects();
+      const skills = await getSkills();
+      set({ skills });
       set({ projects });
     } catch (err) {
       console.log(err);
@@ -42,6 +58,7 @@ export const useLocalProjectsStore = create<ProjectsState>((set) => ({
   },
   isLoading: true,
 }));
+
 
 // // Vercel deployment store configuration
 // export const useVercelProjectsStore = create<State>((set) => ({

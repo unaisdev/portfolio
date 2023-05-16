@@ -10,26 +10,18 @@ import LastProjects from '@/components/Projects'
 import Technologies from '@/components/Technologies'
 import Experience from '@/components/Experience'
 import { Analytics } from '@vercel/analytics/react';
-import { useLocalProjectsStore } from '@/zustand/store'
 import { useEffect, useState } from 'react'
+import { useLocalStore } from '@/zustand/store'
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [populateData, isLoading] = useLocalStore((state) => [
+    state.populateData,
+    state.isLoading
+  ])
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
-  }, [])
-
-  // const [populateProjects, isLoading] = useLocalProjectsStore((state) => [
-  //   state.populateProjects,
-  //   state.isLoading
-  // ])
-
-  // useEffect(() => {
-  //   populateProjects();
-  // }, [populateProjects]);
+    populateData();
+  }, []);
 
 
   return (
@@ -63,7 +55,7 @@ export default function Home() {
               <Presentation />
               <Experience />
               <LastProjects />
-              <Technologies skills={[]} />
+              <Technologies />
             </main>
             <Footer />
             <Analytics />

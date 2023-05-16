@@ -1,8 +1,11 @@
 import { skill } from "@prisma/client"
 import SkillList from "./SkillList"
+import { useLocalStore } from "@/zustand/store"
 
 
 const Technologies = () => {
+    const skills = useLocalStore((state) => state.skills)
+
     return (
         <section className="py-4 sm:py-12">
             <div className="flex justify-between flex-col md:flex-row">
@@ -40,8 +43,8 @@ const Technologies = () => {
                 </div> */}
             </div>
 
-            <div className="flex flex-row flex-wrap justify-center divide-x-0 py-6 sm:py-12">
-                <SkillList skills={[]} />
+            <div className="flex flex-row flex-wrap justify-center divide-x-0 py-6 sm:py-12 px-6">
+                <SkillList skills={skills}/>
             </div>
         </section>
     )
