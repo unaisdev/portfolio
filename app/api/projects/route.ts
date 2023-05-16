@@ -5,9 +5,9 @@ export async function GET(request: Request) {
   try {
     // Use the Prisma client to interact with your MongoDB
     const data = await prisma.project.findMany();
-    return new Response("data" + JSON.stringify(data));
+    return new Response(JSON.stringify(data));
   } catch (error) {
-    return new Response("error" + JSON.stringify(error));
+    return new Response(JSON.stringify(error));
   } finally {
     await prisma.$disconnect();
   }
