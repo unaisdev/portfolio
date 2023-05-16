@@ -7,6 +7,7 @@ import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, useTheme } from 'next-themes'
 import SocialMediaButtons from '@/components/SocialMediaButtons'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -26,6 +27,8 @@ export default function Home() {
           <SocialMediaButtons />
         </div>
       </div>
+      <Analytics />
+
     </ThemeProvider>
   )
 }
