@@ -7,7 +7,7 @@ export async function GET(request: Request) {
     const data = await prisma.project.findMany();
     return new Response("data" + JSON.stringify(data));
   } catch (error) {
-    return new Response(JSON.stringify(error));
+    return new Response("error" + JSON.stringify(error));
   } finally {
     await prisma.$disconnect();
   }
