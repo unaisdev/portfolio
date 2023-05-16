@@ -11,17 +11,25 @@ import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 import { Analytics } from '@vercel/analytics/react';
 import { useLocalProjectsStore } from '@/zustand/store'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [populateProjects, isLoading] = useLocalProjectsStore((state) => [
-    state.populateProjects,
-    state.isLoading
-  ])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    populateProjects();
-  }, [populateProjects]);
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+  }, [])
+
+  // const [populateProjects, isLoading] = useLocalProjectsStore((state) => [
+  //   state.populateProjects,
+  //   state.isLoading
+  // ])
+
+  // useEffect(() => {
+  //   populateProjects();
+  // }, [populateProjects]);
 
 
   return (
