@@ -19,7 +19,7 @@ const ProjectList = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
-        }, 1000)
+        }, 2000)
     }, [])
 
 
