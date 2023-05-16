@@ -20,13 +20,16 @@ export default function Home() {
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const tecnologiesRef = useRef<HTMLDivElement | null>(null);
 
-  const [populateData, isLoading] = useLocalStore((state) => [
+  const [projects, populateData, isLoading] = useLocalStore((state) => [
+    state.projects,
     state.populateData,
     state.isLoading
   ])
 
   useEffect(() => {
-    populateData();
+    console.log("usieffect" + projects.length);
+    
+    if(projects.length === 0)   populateData();
   }, []);
 
   const handleScrollToInicio = () => {
