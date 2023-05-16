@@ -7,9 +7,13 @@ type State = {
   populateProjects: () => void;
 };
 
+
+
 const getProjects = async (): Promise<project[]> => {
+  
   try {
-    const res = await fetch(`http://localhost:3000/api/projects`, {
+    
+    const res = await fetch(process.env.PUBLIC_API_URL, {
       method: "GET",
       headers: {},
     });
