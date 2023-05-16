@@ -7,13 +7,9 @@ type State = {
   populateProjects: () => void;
 };
 
-
-
 const getProjects = async (): Promise<project[]> => {
-  
   try {
-    
-    const res = await fetch(process.env.PUBLIC_API_URL, {
+    const res = await fetch(`api/projects`, {
       method: "GET",
       headers: {},
     });
