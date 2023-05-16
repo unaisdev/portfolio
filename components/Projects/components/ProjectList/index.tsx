@@ -1,9 +1,9 @@
-import { useProjectsStore } from "@/zustand/store"
+import { useLocalProjectsStore } from "@/zustand/store"
 import { useEffect } from "react"
 import ProjectCard from "../ProjectCard"
 
 const ProjectList = () => {
-    const [projects, populateProjects, isLoading] = useProjectsStore((state) => [
+    const [projects, populateProjects, isLoading] = useLocalProjectsStore((state) => [
         state.projects,
         state.populateProjects,
         state.isLoading

@@ -23,7 +23,7 @@ const getProjects = async (): Promise<project[]> => {
   }
 };
 
-export const useProjectsStore = create<State>((set) => ({
+export const useLocalProjectsStore = create<State>((set) => ({
   projects: [],
   populateProjects: async () => {
     try {
@@ -36,4 +36,24 @@ export const useProjectsStore = create<State>((set) => ({
     }
   },
   isLoading: true,
+}));
+
+// Vercel deployment store configuration
+export const useVercelProjectsStore = create<State>((set) => ({
+  projects: [
+    {
+      id: "1",
+      title: "Portfolio",
+      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, maiores quod ad ducimus dolor incidunt velit quasi reiciendis debitis amet possimus harum eum voluptate quis nulla explicabo soluta, neque error.",
+      image_src: "/images/portfolio_unai_canales.webp",
+      published_at: "",
+      skillIds: [1, 2],
+    },
+    // Add other projects as needed
+  ],
+  populateProjects: async () => {
+    // No API fetch is required in this case, as we're using literals
+    // If needed, you can implement additional logic here
+  },
+  isLoading: false,
 }));

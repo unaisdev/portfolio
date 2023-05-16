@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
-import LastProjects from '@/components/LastProjects'
+import LastProjects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
 
