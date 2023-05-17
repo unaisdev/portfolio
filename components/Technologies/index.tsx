@@ -43,7 +43,7 @@ const Technologies = () => {
                 </div> */}
             </div>
 
-            <div className="flex flex-row flex-wrap justify-center divide-x-0 py-6 sm:py-12 px-6">
+            <div className="flex flex-row flex-wrap justify-center divide-x-0 py-6 px-6">
                 <SkillList skills={skills}/>
             </div>
         </section>

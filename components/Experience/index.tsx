@@ -37,7 +37,7 @@ const Experience = () => {
                                 {
                                     id: "qqqqq",
                                     image_path: "/skills/aws-icon.webp",
-                                    name: "Amazon Web Service"
+                                    name: "Amazon Web Services"
                                 },
                                 {
                                     id: "asdaeeeeesd",
