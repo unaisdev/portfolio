@@ -4,9 +4,9 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Unai Canales | Portfolio',
-  description: 'Portfolio de Unai Canales, desarrollador de aplicaciones multiplataforma.',
-  keywords: ["unaicanales.vercel.app", "unai canales", "unai canales sirvent", "paginas web irun"]
+  title: 'Unai Canales Sirvent | Hallo!',
+  description: 'Una página web a modo de presentación, portfolio, currículum... llámalo como quieras. Desarrollador de aplicaciones web y móvil. Hecha con NextJS, MongoDB, Prisma, Zustand, TailwindCSS...',
+  keywords: ["unaicanales.vercel.app", "unai canales", "unai canales sirvent", "paginas web irun", "aplicaciones moviles irun", "unai irun", "irun programador", ""]
 }
 
 export default function RootLayout({
