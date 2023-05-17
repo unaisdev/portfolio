@@ -70,36 +70,36 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
 
                             <ul className="flex flex-col space-y-3 mb-6">
                                 <li>
-                                    <a
+                                    <p
                                         onClick={() => { scrollTo.handleScrollToInicio(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Inicio
-                                    </a>
+                                    </p>
                                 </li>
                                 <li>
-                                    <a
+                                    <p
                                         onClick={() => { scrollTo.handleScrollToExperience(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Experiencia
-                                    </a>
+                                    </p>
                                 </li>
                                 <li>
-                                    <a
+                                    <p
                                         onClick={() => { scrollTo.handleScrollToProjects(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Projectos
-                                    </a>
+                                    </p>
                                 </li>
                                 <li>
-                                    <a
+                                    <p
                                         onClick={() => { scrollTo.handleScrollToTechnologies(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Tecnologías
-                                    </a>
+                                    </p>
                                 </li>
                             </ul>
                             <div className="">

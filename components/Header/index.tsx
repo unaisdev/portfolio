@@ -41,36 +41,36 @@ const Header = ({ scrollTo }: Props) => {
             <nav className="hidden sm:flex">
                 <ul className="flex gap-10 ">
                     <li>
-                        <a
+                        <p
                             onClick={scrollTo.handleScrollToInicio}
                             className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                         >
                             Inicio
-                        </a>
+                        </p>
                     </li>
                     <li>
-                        <a
+                        <p
                             onClick={scrollTo.handleScrollToExperience}
                             className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                         >
                             Experiencia
-                        </a>
+                        </p>
                     </li>
                     <li>
-                        <a
+                        <p
                             onClick={scrollTo.handleScrollToProjects}
                             className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                         >
                             Projectos
-                        </a>
+                        </p>
                     </li>
                     <li>
-                        <a
+                        <p
                             onClick={scrollTo.handleScrollToTechnologies}
                             className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                         >
                             Tecnologías
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </nav>
