@@ -47,7 +47,7 @@ const Presentation = () => {
                     />
                 </div> */}
             </div>
-            <InfoPresentation />
+            {/* <InfoPresentation /> */}
 
         </section>
     );

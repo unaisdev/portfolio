@@ -2,7 +2,7 @@ import SkillList from "../Technologies/SkillList"
 
 const Experience = () => {
     return (
-        <section className="pt-20 pb-12 sm:py-12 px-6 bg-white dark:bg-black transition duration-500">
+        <section className="py-8 sm:py-12 px-6 bg-white dark:bg-black transition duration-500">
             <div className="flex justify-around flex-col">
                 <div className="flex flex-row pb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" className="mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -27,7 +27,7 @@ const Experience = () => {
                         </div>
 
 
-                        <div className="py-2 sm:py-0 w-max ">
+                        <div className="py-2 sm:py-0">
                             <SkillList skills={[
                                 {
                                     id: "asdasd",

@@ -14,9 +14,9 @@ interface SkillIconProps {
 
 const SkillIcon = ({ name, imagePath }: SkillIconProps): ReactElement => {
     return (
-        <div className="flex items-center justify-between border rounded-3xl px-4 py-2 m-2">
-            <Image className="mr-4" src={imagePath} alt={name} width={24} height={24} />
-            <span className="text-sm">{name}</span>
+        <div className="flex items-center justify-between border rounded-full px-4 sm:px-6 py-1 sm:py-2 m-2">
+            <Image className="mr-4 my-2" src={imagePath} alt={name} width={24} height={24} />
+            <span className="text-xs sm:text-sm">{name}</span>
         </div>
     );
 };
@@ -24,7 +24,7 @@ const SkillIcon = ({ name, imagePath }: SkillIconProps): ReactElement => {
 const SkillList = ({ skills }: Props) => {
 
     return (
-        <div className="flex flex-wrap w-screen md:w-auto justify-center ">
+        <div className="flex flex-wrap w-screen md:w-auto justify-center px-2">
             {skills.map((skill) => (
                 <SkillIcon
                     imagePath={skill.image_path}
