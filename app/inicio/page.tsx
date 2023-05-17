@@ -47,7 +47,7 @@ export default function Home() {
     const offsetTop = experienceRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
-      top: offsetTop - 80,
+      top: offsetTop - 65,
       behavior: 'smooth',
     });
   }
@@ -58,7 +58,7 @@ export default function Home() {
     const offsetTop = projectsRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
-      top: offsetTop - 80,
+      top: offsetTop - 75,
       behavior: 'smooth',
     });
   }
@@ -69,7 +69,7 @@ export default function Home() {
     const offsetTop = tecnologiesRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
-      top: offsetTop - 80,
+      top: offsetTop - 65,
       behavior: 'smooth',
     });
   }
