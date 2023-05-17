@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
-import DarkModeToggle from "../../DarkModeToggle";
-import SocialMediaButtons from "../../SocialMediaButtons";
+import DarkModeToggle from "../../general/DarkModeToggle";
+import SocialMediaButtons from "../../general/SocialMediaButtons";
 import Image from "next/image";
 
 interface HeaderProps {

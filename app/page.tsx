@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 import Image from 'next/image'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, useTheme } from 'next-themes'
-import SocialMediaButtons from '@/components/SocialMediaButtons'
+import SocialMediaButtons from '@/components/general/SocialMediaButtons'
 import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {

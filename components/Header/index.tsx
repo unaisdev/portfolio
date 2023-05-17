@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import './styles.css';
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "../general/DarkModeToggle";
 import MobileNav from "./MobileNav";
 
 type Props = {

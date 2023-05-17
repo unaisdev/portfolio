@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import SocialMediaButtons from '../SocialMediaButtons';
+import SocialMediaButtons from '../general/SocialMediaButtons';
 import './styles.css'; // Importa tus estilos personalizados
 import InfoPresentation from './InfoPresentation';
 

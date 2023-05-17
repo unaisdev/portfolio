@@ -1,7 +1,7 @@
 'use client'
 
 import "./styles.css";
-import SocialMediaButtons from '../SocialMediaButtons';
+import SocialMediaButtons from '../general/SocialMediaButtons';
 
 const Footer = () => {
     return (
