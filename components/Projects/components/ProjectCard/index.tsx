@@ -1,8 +1,9 @@
-import { project } from "@prisma/client";
+import SkillList from "@/components/Technologies/SkillList";
+import { Project } from "@prisma/client";
 import Image from "next/image";
 
 type Props = {
-    project: project;
+    project: Project;
 }
 
 const ProjectCard = ({ project }: Props) => {

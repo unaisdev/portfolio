@@ -1,4 +1,3 @@
-import { skill } from "@prisma/client"
 import SkillList from "./SkillList"
 import { useLocalStore } from "@/zustand/store"
 

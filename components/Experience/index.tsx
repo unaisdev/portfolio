@@ -32,7 +32,7 @@ const Experience = () => {
                                 {
                                     id: "asdasd",
                                     image_path: "/skills/android-icon.webp",
-                                    name: "Android"
+                                    name: "Android",
                                 },
                                 {
                                     id: "qqqqq",

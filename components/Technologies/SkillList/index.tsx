@@ -1,10 +1,10 @@
 import { useLocalStore } from "@/zustand/store";
-import { skill } from "@prisma/client"
+import { Skill } from "@prisma/client";
 import Image from "next/image";
 import { ReactElement } from "react";
 
 interface Props {
-    skills: skill[];
+    skills: Skill[];
 }
 
 interface SkillIconProps {
@@ -27,7 +27,7 @@ const SkillIcon = ({ name, imagePath }: SkillIconProps): ReactElement => {
 };
 
 const SkillList = ({ skills }: Props) => {
-
+    console.log(skills)
     return (
         <div className="flex flex-wrap w-screen md:w-auto justify-center px-2">
             {skills.map((skill) => (

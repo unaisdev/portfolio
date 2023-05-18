@@ -10,17 +10,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model project {
-  id           String  @id @map("_id")
+model Project {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
   image_src    String
   title        String
   desc         String
   published_at String?
-  skillIds     Int[]
+  skillIds     String[]
 }
 
-model skill {
-  id         String @id @map("_id")
-  name       String
-  image_path String
+model Skill {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  image_path   String
+  experience   Experience? @relation(fields: [experienceId], references: [id])
+  experienceId String? 
+}
+
+model Experience {
+  id        String  @id @map("_id")
+  from_date String
+  to_date   String
+  title     String
+  desc      String
+  skills    Skill[]
 }

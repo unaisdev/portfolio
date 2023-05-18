@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Skill } from "@prisma/client";
 
 export async function GET(request: Request) {
   const prisma = new PrismaClient();
