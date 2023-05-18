@@ -28,8 +28,10 @@ const SkillIcon = ({ name, imagePath }: SkillIconProps): ReactElement => {
 
 const SkillList = ({ skills }: Props) => {
     console.log(skills)
+    skills.sort(() => Math.random() - 0.5);
+
     return (
-        <div className="flex flex-wrap w-screen md:w-auto justify-center px-2">
+        <div className="flex flex-wrap md:w-auto justify-center px-2">
             {skills.map((skill) => (
                 <SkillIcon
                     imagePath={skill.image_path}

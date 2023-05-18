@@ -4,7 +4,7 @@ const InfoPresentation = () => {
             <div className="flex h-full flex-row justify-between items-center px-12">
                 <div className="flex flex-col">
                     <div className="flex items-center my-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M12 20m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
                             <path d="M10 20h-6"></path>
@@ -24,7 +24,7 @@ const InfoPresentation = () => {
                 
 
                 <div className="flex divide-x flex-col ">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="mr-4 w-14 h-14" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="mr-4 w-14 h-14" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M13 19h-8a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6"></path>
                         <path d="M3 7l9 6l9 -6"></path>

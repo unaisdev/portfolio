@@ -78,7 +78,7 @@ export default function Home() {
     <ThemeProvider attribute="class">
       {
         isLoading ? (
-          <div className="h-screen w-screen flex flex-col justify-center bg-gray-900 items-center">
+          <div className="h-screen overflow-hidden w-screen flex flex-col justify-center bg-gray-900 items-center">
             <div className="h-12 w-12 animate-spin">
               <div className="h-full w-full border-4 border-t-purple-500 border-b-purple-700 rounded-[50%]">
               </div>

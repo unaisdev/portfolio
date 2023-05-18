@@ -2,7 +2,7 @@ import { SetState, create } from 'zustand'
 import Image from "next/image"
 import { Prisma } from "@prisma/client";
 import { use, useEffect } from 'react';
-import ProjectList from './components/ProjectList';
+import ProjectList from './ProjectList';
 
 const LastProjects = () => {
 

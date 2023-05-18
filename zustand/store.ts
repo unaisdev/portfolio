@@ -1,10 +1,11 @@
 import { create } from "zustand";
-import { Prisma, Project, Skill } from "@prisma/client";
+import { Job, Prisma, Project, Skill } from "@prisma/client";
 
 type State = {
   isLoading: boolean;
   projects: Project[];
   skills: Skill[];
+  jobs: Job[];
   populateData: () => void;
 };
 
@@ -41,16 +42,35 @@ const getSkills = async (): Promise<Skill[]> => {
   }
 };
 
+const getJobs = async (): Promise<Job[]> => {
+  try {
+    const res = await fetch(`api/jobs`, {
+      method: "GET",
+      headers: {},
+    });
+
+    const data: Job[] = await res.json();
+    console.log(JSON.stringify(data));
+    return data;
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+};
+
 export const useLocalStore = create<State>((set) => ({
   projects: [],
   skills: [],
+  jobs: [],
   isLoading: true,
   populateData: async () => {
     try {
       const projects = await getProjects();
       const skills = await getSkills();
+      const jobs = await getJobs();
       set({ skills });
       set({ projects });
+      set({ jobs });
     } catch (err) {
       console.log(err);
     } finally {
