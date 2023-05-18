@@ -104,11 +104,14 @@ export default function Home() {
             <main>
               <Presentation />
               <div ref={experienceRef}>
+                <hr></hr>
                 <Experience />
+                <hr></hr>
 
               </div>
               <div ref={projectsRef}>
                 <LastProjects />
+                <hr></hr>
 
               </div>
               <div ref={tecnologiesRef}>
