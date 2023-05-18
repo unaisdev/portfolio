@@ -23,11 +23,11 @@ model Skill {
   id           String      @id @default(auto()) @map("_id") @db.ObjectId
   name         String
   image_path   String
-  experience   Experience? @relation(fields: [experienceId], references: [id])
+  experience   Job? @relation(fields: [experienceId], references: [id])
   experienceId String? 
 }
 
-model Experience {
+model Job {
   id        String  @id @map("_id")
   from_date String
   to_date   String

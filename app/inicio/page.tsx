@@ -28,7 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     populateData();
-  }, []);
+  }, [populateData]);
 
   const handleScrollToInicio = () => {
     console.log("scrolling");
