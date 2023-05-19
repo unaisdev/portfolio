@@ -25,7 +25,6 @@ const SkillIcon = ({ name, imagePath, showText }: SkillIconProps): ReactElement 
             <div className="flex items-center justify-around px-2">
                 <div className="flex items-center justify-center rounded-full z-10">
                     <Image className="m-2 z-20" src={imagePath} alt={name} width={24} height={24} />
-
                 </div>
                 {showText && (
                     <span className="text-xs sm:text-sm pl-2 z-20">{name}</span>

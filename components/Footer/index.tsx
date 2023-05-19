@@ -1,5 +1,3 @@
-'use client'
-
 import "./styles.css";
 import SocialMediaButtons from '../general/SocialMediaButtons';
 

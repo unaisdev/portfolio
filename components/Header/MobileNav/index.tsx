@@ -70,21 +70,6 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
 
                             <div className="flex justify-end items-center mb-5">
                                 <DarkModeToggle />
-
-                                {/* <button
-                                    className="bg-red-800 h-10 w-10 p-2 rounded-xl"
-                                    onClick={() => setOpen(false)}
-                                    aria-expanded={open}
-                                    aria-controls="sidebar"
-                                >
-                                    <Image
-                                        className=""
-                                        width={32}
-                                        height={32}
-                                        src="icons/icon-close-menu.svg"
-                                        alt="Close Menu"
-                                    />
-                                </button> */}
                             </div>
 
                             <ul className="flex flex-col space-y-3 mb-6">
@@ -137,8 +122,6 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                 <SocialMediaButtons />
                             </div>
                         </div>
-
-
                     </div>
                 </Transition.Child>
                 <Transition.Child

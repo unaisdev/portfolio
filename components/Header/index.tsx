@@ -118,9 +118,7 @@ const Header = ({ scrollTo }: Props) => {
                     </button>
                 </div>
             </div>
-
             <MobileNav scrollTo={scrollTo} open={open} setOpen={setOpen} />
-
         </header>
     )
 }
