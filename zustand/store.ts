@@ -18,7 +18,6 @@ const getProjects = async (): Promise<Project[]> => {
     });
 
     const data: Project[] = await res.json();
-    console.log(JSON.stringify(data));
     return data;
   } catch (err) {
     console.log(err);
@@ -34,7 +33,6 @@ const getSkills = async (): Promise<Skill[]> => {
     });
 
     const data: Skill[] = await res.json();
-    console.log(JSON.stringify(data));
     return data;
   } catch (err) {
     console.log(err);
@@ -50,7 +48,6 @@ const getJobs = async (): Promise<Job[]> => {
     });
 
     const data: Job[] = await res.json();
-    console.log(JSON.stringify(data));
     return data;
   } catch (err) {
     console.log(err);

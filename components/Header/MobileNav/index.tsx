@@ -2,6 +2,7 @@ import { Disclosure, Transition } from "@headlessui/react";
 import DarkModeToggle from "../../general/DarkModeToggle";
 import SocialMediaButtons from "../../general/SocialMediaButtons";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface HeaderProps {
     open: boolean;
@@ -14,6 +15,24 @@ interface HeaderProps {
     };
 
 }
+
+
+const variants = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            y: { stiffness: 1000, velocity: -300 }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: { stiffness: 1000 }
+        }
+    }
+};
 
 const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
 
@@ -44,7 +63,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                 >
                     <div
                         id="sidebar"
-                        className={`fixed flex justify-between right-0 top-0 w-[180px] h-screen bg-white dark:bg-gray-900 pt-12 p-8 z-50 py-24 transition duration-500`}
+                        className={`fixed flex justify-between bg-opacity-100 right-0 top-0 w-[180px] h-screen bg-white dark:bg-gray-900 pt-12 p-8 z-50 py-24 transition duration-500`}
                     >
                         <div className="flex flex-col flex-grow justify-between">
 
@@ -69,38 +88,50 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                             </div>
 
                             <ul className="flex flex-col space-y-3 mb-6">
-                                <li>
+                                <motion.li
+                                    variants={variants}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <p
                                         onClick={() => { scrollTo.handleScrollToInicio(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Inicio
                                     </p>
-                                </li>
-                                <li>
+                                </motion.li>
+                                <motion.li
+                                    variants={variants}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <p
                                         onClick={() => { scrollTo.handleScrollToExperience(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Experiencia
                                     </p>
-                                </li>
-                                <li>
+                                </motion.li>
+                                <motion.li
+                                    variants={variants}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <p
                                         onClick={() => { scrollTo.handleScrollToProjects(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Projectos
                                     </p>
-                                </li>
-                                <li>
+                                </motion.li>
+                                <motion.li
+                                    variants={variants}
+                                    whileTap={{ scale: 0.9 }}
+                                >
                                     <p
                                         onClick={() => { scrollTo.handleScrollToTechnologies(); setOpen(false) }}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Tecnologías
                                     </p>
-                                </li>
+                                </motion.li>
                             </ul>
                             <div className="">
                                 <SocialMediaButtons />

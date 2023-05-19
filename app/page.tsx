@@ -11,8 +11,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
   const { systemTheme, theme, setTheme } = useTheme();
-  console.log(systemTheme)
-  console.log(theme)
+ 
 
   return (
     <ThemeProvider attribute="class">

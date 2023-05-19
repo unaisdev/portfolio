@@ -12,9 +12,7 @@ const DarkModeToggle = ({ colour = 'bg-gray-200 dark:bg-gray-300 transition dura
     }, []);
 
     useEffect(() => {
-        setIsOn(resolvedTheme === "dark");
-        console.log(resolvedTheme);
-        
+        setIsOn(resolvedTheme === "dark");        
     }, [resolvedTheme]);
 
     function toggle() {

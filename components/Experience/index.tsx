@@ -4,7 +4,7 @@ import JobList from "./JobList"
 
 const Experience = () => {
     return (
-        <section className="py-8 sm:py-12 px-6 bg-white dark:bg-black transition duration-500">
+        <section className="py-2 pt-6 sm:py-12 px-6 bg-white dark:bg-black transition duration-500">
             <div className="flex justify-around flex-col">
                 <div className="flex flex-row">
                     <svg xmlns="http://www.w3.org/2000/svg" className="mr-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">

@@ -31,8 +31,6 @@ export default function Home() {
   }, [populateData]);
 
   const handleScrollToInicio = () => {
-    console.log("scrolling");
-
     const offsetTop = inicioRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
@@ -42,8 +40,6 @@ export default function Home() {
   }
 
   const handleScrollToExperience = () => {
-    console.log("scrolling");
-
     const offsetTop = experienceRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
@@ -53,8 +49,6 @@ export default function Home() {
   }
 
   const handleScrollToProjects = () => {
-    console.log("scrolling");
-
     const offsetTop = projectsRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
@@ -64,8 +58,6 @@ export default function Home() {
   }
 
   const handleScrollToTechnologies = () => {
-    console.log("scrolling");
-
     const offsetTop = tecnologiesRef?.current?.offsetTop ?? 0
 
     window.scrollTo({
@@ -104,14 +96,11 @@ export default function Home() {
             <main>
               <Presentation />
               <div ref={experienceRef}>
-                <hr></hr>
                 <Experience />
-                <hr></hr>
 
               </div>
               <div ref={projectsRef}>
                 <LastProjects />
-                <hr></hr>
 
               </div>
               <div ref={tecnologiesRef}>
