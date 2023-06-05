@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import SocialMediaButtons from '../general/SocialMediaButtons';
 import './styles.css'; // Importa tus estilos personalizados
 import InfoPresentation from './InfoPresentation';
+import MovableDiv from '../MovableDiv';
 
 const variants = {
     open: {
@@ -22,8 +23,8 @@ const Presentation = () => {
     }, []);
 
     return (
-        <section className='relative'>
-            <div id="presentation" className="relative h-96 max-h-96 flex bg-clip-border bg-no-repeat bg-fixed bg-center bg-cover flex-col-reverse md:flex-row justify-center items-center py-8">
+        <section className='relative w-full'>
+            <div id="presentation" className="-z-20 relative h-96 max-h-96  flex bg-clip-border bg-no-repeat bg-fixed bg-center bg-cover flex-col-reverse md:flex-row justify-center items-center py-8">
                 {/* Capa de color y opacidad para la imagen del fondo */}
                 <div className='absolute inset-0 w-full h-full bg-slate-100 dark:bg-black bg-opacity-90 dark:bg-opacity-80 transition duration-500'></div>
                 <div
@@ -38,6 +39,7 @@ const Presentation = () => {
                         <h1 className="text-4xl md:text-5xl font-semibold text-right">Unai Canales Sirvent</h1>
                         <h2 className="text-xl md:text-xl font-medium text-right">Fullstack Developer</h2>
                     </div>
+                    {/* <MovableDiv /> */}
 
                     <div>
                         <SocialMediaButtons />

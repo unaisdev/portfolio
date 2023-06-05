@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 interface HeaderProps {
     open: boolean;
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    handleClose: () => void;
     scrollTo: {
         handleScrollToInicio: () => void,
         handleScrollToExperience: () => void,
@@ -15,7 +15,6 @@ interface HeaderProps {
     };
 
 }
-
 
 const variants = {
     open: {
@@ -34,20 +33,13 @@ const variants = {
     }
 };
 
-const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
+const MobileNav = ({ open, handleClose, scrollTo }: HeaderProps) => {
+    const handleInicioClick = () => { scrollTo.handleScrollToInicio(); handleClose() }
+    const handleExperienciaClick = () => { scrollTo.handleScrollToExperience(); handleClose() }
+    const handleProjectosClick = () => { scrollTo.handleScrollToProjects(); handleClose() }
+    const handleTecnologiasClick = () => { scrollTo.handleScrollToTechnologies(); handleClose() }
 
-    function handleClickCarta() {
-        const anchor = document.querySelector("#carta");
-        anchor?.scrollIntoView({ behavior: "smooth" });
-        setOpen(false)
-    }
-
-    function handleClickInfo() {
-        const anchor = document.querySelector("#info");
-        anchor?.scrollIntoView({ behavior: "smooth" });
-        setOpen(false)
-    }
-
+    console.log(open)
     return (
         <>
             <Transition show={open}>
@@ -78,7 +70,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <p
-                                        onClick={() => { scrollTo.handleScrollToInicio(); setOpen(false) }}
+                                        onClick={handleInicioClick}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Inicio
@@ -89,7 +81,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <p
-                                        onClick={() => { scrollTo.handleScrollToExperience(); setOpen(false) }}
+                                        onClick={handleExperienciaClick}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Experiencia
@@ -100,7 +92,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <p
-                                        onClick={() => { scrollTo.handleScrollToProjects(); setOpen(false) }}
+                                        onClick={handleProjectosClick}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Projectos
@@ -111,7 +103,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <p
-                                        onClick={() => { scrollTo.handleScrollToTechnologies(); setOpen(false) }}
+                                        onClick={handleTecnologiasClick}
                                         className="cursor-pointer dark:text-white hover:[text-shadow:_1px_3px_8px_rgb(88_88_88_/_80%)] hover:dark:[text-shadow:_1px_3px_8px_rgb(255_255_255_/_100%)]"
                                     >
                                         Tecnologías
@@ -133,7 +125,7 @@ const MobileNav = ({ open = false, setOpen, scrollTo }: HeaderProps) => {
                     leaveTo="opacity-0"
                 >
                     <div
-                        onClick={() => setOpen(false)}
+                        onClick={handleClose}
                         className={`"w-full h-full fixed bg-black opacity-80 z-10 inset-0`}
                     ></div>
                 </Transition.Child>

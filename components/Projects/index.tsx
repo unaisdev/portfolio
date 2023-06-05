@@ -26,6 +26,7 @@ const LastProjects = () => {
             <div className="flex flex-col sm:my-4">
                 <ProjectList />
             </div>
+
         </section>
     )
 }

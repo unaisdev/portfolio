@@ -93,8 +93,9 @@ export default function Home() {
         ) : (
           <>
             <Header scrollTo={{ handleScrollToInicio, handleScrollToExperience, handleScrollToProjects, handleScrollToTechnologies }} />
-            <main>
-              <Presentation />
+            <Presentation />
+
+            <main className='md:mx-40 lg:mx-64 xl:mx-96 '>
               <div ref={experienceRef}>
                 <Experience />
 
